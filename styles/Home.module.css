@@ -13,25 +13,34 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 1440px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
 
+.titleButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin: 50px 0 100px 0;
+}
+
 .title {
-  font-size: 35px;
+  font-size: 30px;
   color: hsl(233, 13%, 49%);
-  margin-top: 10%;
-  margin-bottom: 4%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 .switchPlan {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 20%;
+  width: 70%;
 }
 
 .text {
@@ -43,20 +52,232 @@
   outline: none;
   background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border: none;
-  width: 60px;
+  width: 55px;
   height: 30px;
   border-radius: 9999px;
+  cursor: pointer;
+  position: relative;
+}
+
+.discLeft {
+  width:24px;
+  height: 24px;
+  border-radius: 9999px;
+  bottom: 3px;
+  left: 4px;
+  background-color: white;
+  position: absolute;
+}
+
+.discRight {
+  width:24px;
+  height: 24px;
+  border-radius: 9999px;
+  bottom: 3px;
+  right: 4px;
+  background-color: white;
+  position: absolute;
 }
 
 .topBg {
   position: absolute;
   top: 0%;
   right: 0%;
-  z-index: -1;
 }
 
 .bottomBg {
   position: absolute;
+  bottom: 0%;
   left: 0%;
-  top: 0%;
+}
+
+.planContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  width: 72%;
+  height: 50%;
+  -webkit-box-shadow: 1px 9px 34px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 9px 34px 1px rgba(0, 0, 0, 0.15);
+}
+
+.leftCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 33.3%;
+  height: 100%;
+  color: hsl(232, 13%, 33%);
+}
+
+.middleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 33.3%;
+  height: 110%;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(135deg,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+.rightCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 33.3%;
+  height: 100%;
+  color: hsl(232, 13%, 33%);
+}
+
+.cardButton {
+  font-family: 'Montserrat',
+  sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  outline: none;
+  color: white;
+  width: 84%;
+  height: 9%;
+  letter-spacing: 1px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cardButton:hover {
+  background: white;
+  color:hsl(237, 63%, 64%);
+  border: 1px solid hsl(232, 13%, 33%);
+}
+
+.cardButtonAlt {
+  font-family: 'Montserrat',
+  sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: white;
+  outline: none;
+  color:hsl(237, 63%, 64%);
+  width: 85%;
+  height: 42px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cardButtonAlt:hover {
+  background: transparent;
+  color:white;
+  border: 1px solid white;
+}
+
+.cardTitle {
+  font-size: 19px;
+  color: hsl(233, 13%, 49%);
+  margin-top: 10%;
+  margin-bottom: 6%;
+}
+
+.cardPrice {
+  display: flex;
+  align-items: center;
+  color: hsl(232, 13%, 33%);
+}
+
+.dollar {
+  height: 33px;
+  font-size: 32px;
+  padding-right: 12px;
+}
+
+.price {
+  font-size: 65px;
+}
+
+.detailContainer {
+  height: 48%;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDetail {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(233, 13%, 49%);
+  height: 20%;
+  padding: 25px 0;
+  border-top: 1px solid hsl(240, 16%, 91%);
+}
+
+.cardDetailLast {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(233, 13%, 49%);
+  height: 20%;
+  padding: 25px 0;
+  border-top: 1px solid hsl(240, 16%, 91%);
+  border-bottom: 1px solid hsl(240, 16%, 91%);
+}
+
+.cardTitleAlt {
+  font-size: 19px;
+  color: white;
+  margin-top: 16%;
+  margin-bottom: 6%;
+}
+
+.dollarAlt {
+  height: 33px;
+  font-size: 32px;
+  padding-right: 12px;
+  color: white;
+}
+
+.priceAlt {
+  color: white;
+  font-size: 65px;
+}
+
+.detailContainerAlt {
+  height: 44%;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDetailAlt {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 20%;
+  padding: 25px 0;
+  border-top: 1px solid hsl(240, 16%, 91%);
+}
+
+.cardDetailLastAlt {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 20%;
+  padding: 25px 0;
+  border-top: 1px solid hsl(240, 16%, 91%);
+  border-bottom: 1px solid hsl(240, 16%, 91%);
 }
